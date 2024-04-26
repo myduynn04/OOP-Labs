@@ -7,6 +7,9 @@ import hust.soict.ict.aims.media.DigitalVideoDisc;
 import hust.soict.ict.aims.media.Media;
 import hust.soict.ict.aims.media.Playable;
 import hust.soict.ict.aims.store.Store;
+import java.io.*;
+import java.util.Scanner;
+
 
 public class Aims {
 	 private static final Scanner scanner = new Scanner(System.in);
