@@ -3,147 +3,109 @@ import hust.soict.ict.aims.media.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
+import javax.naming.LimitExceededException;
+
+import java.util.Comparator;
+import java.util.Collections.*;
 
 public class Cart {
-	public static final int MAX_NUMBERS_ORDERED = 20;
-    private ArrayList<Media> itemsOrdered = new ArrayList<>();
-
-    //thêm media vào giỏ hàng
-    public void addMedia(Media media){
-        if(itemsOrdered.size() >= MAX_NUMBERS_ORDERED){
-            System.out.println("The cart is full. Please remove some items to continue.");
-        }
-        else{
-            itemsOrdered.add(media);
-            System.out.println("The media has been added to the cart");
-            if(itemsOrdered.size() >= 18){
-                System.out.println("The cart is almost full");
+    public static final int MAX_NUMBERS_ORDERED = 20;
+    //    private ArrayList<Media> itemsOrdered = new ArrayList<Media>();
+    private ObservableList<Media> itemsOrdered = FXCollections.observableArrayList();
+    public void addMedia(Media media) {
+        try {
+            if (itemsOrdered.size() < MAX_NUMBERS_ORDERED) {
+                for (Media media1 : itemsOrdered) {
+                    if (media1.equals(media)) {
+                        throw new Exception("ERROR: The disc is already in the cart!");
+                    }
+                }
+                itemsOrdered.add(media);
+            } else {
+                throw new LimitExceededException("ERROR: The number of media has reached its limit!");
             }
+        } catch (LimitExceededException e) {
+            // Handle LimitExceededException
+            System.err.println(e.getMessage());
+            // You may choose to log the exception or perform other actions
+        } catch (Exception e) {
+            // Handle other exceptions
+            System.err.println(e.getMessage());
+            // You may choose to log the exception or perform other actions
         }
     }
 
-    // xóa media khỏi giỏ hàng
-    public void removeMedia(Media media){
-        if(itemsOrdered.remove(media)){
-            System.out.println("The media has been removed from the cart");
-        } else {
-            System.out.println("The media is not found in cart.");
+    public void removeMedia(Media media) {
+        try {
+            if (itemsOrdered.isEmpty()) {
+                throw new Exception("ERROR: The cart is empty!");
+            }
+            for (Media media1 : itemsOrdered) {
+                if (media1.equals(media)) {
+                    itemsOrdered.remove(media);
+                    return;
+                }
+            }
+            throw new Exception("ERROR: The disc is not in the cart!");
+        } catch (Exception e) {
+            // Handle other exceptions
+            System.err.println(e.getMessage());
+            // You may choose to log the exception or perform other actions
         }
     }
 
-    // tổng chi phí
-    public double totalCost(){
-        double total = 0;
-        for(Media media : itemsOrdered){
+    public float totalCost() {
+        float total = 0;
+        for (Media media : itemsOrdered) {
             total += media.getCost();
         }
         return total;
     }
 
-    // hiển thị danh sách 
-    public void orderedItems(){
-        if(itemsOrdered.isEmpty()){
-            System.out.println("There are no items in the cart.");
-        }
-        else{
-            System.out.println("***********************CART***********************");
-            System.out.println("Ordered Items:");
-            for(int i = 0; i < itemsOrdered.size(); i++){
-                itemsOrdered.get(i).toStringItem(i + 1);
-            }
-            System.out.println("**************************************************");
-            System.out.println("Total Cost is: " + totalCost() + "$");
-        }
-    }
-
-    //tìm kiếm media theo tiêu đề
-    public void searchByTitle(String title){
-        if(itemsOrdered.isEmpty()){
-            System.out.println("There are no items in the cart.");
-        }
-        else{
-            int count = 0;
-            System.out.println("List of items with title \"" + title + "\":");
-            for(Media media : itemsOrdered){
-                if(media.getTitle().equals(title)){
-                    media.toString();
-                    count++;
-                }
-            }
-            if(count == 0){
-                System.out.println("No items found with title \"" + title + "\" in the cart.");
-            }
-        }
-    }
-
-   
-    public int numberDVD(){
-        int cnt = 0 ;
-        for(Media item : itemsOrdered){
-            if(item instanceof DigitalVideoDisc) {
-                cnt++;
-            }
-        }
-        return cnt;
-    }
-
-    // lọc các phần tử trong giỏ hàng dựa trên tiêu đề
-    public void filterByTitle(String title) {
-        ArrayList<Media> filteredList = new ArrayList<>();
+    public void print() {
+        System.out.println("***********************CART***********************");
+        System.out.println("Ordered items: ");
         for (Media media : itemsOrdered) {
-            if (media.getTitle().equalsIgnoreCase(title)) {
-                filteredList.add(media);
-            }
+            System.out.println(media.getId() + ". " + media.getTitle() + " - " + media.getCategory() + " - " + media.getCost());
         }
-        if (filteredList.isEmpty()) {
-            System.out.println("No items found with title \"" + title + "\" in the cart.");
-        } else {
-            System.out.println("Items with title \"" + title + "\":");
-            for (Media media : filteredList) {
-                media.toStringItem(itemsOrdered.indexOf(media) + 1);
-            }
-        }
+        System.out.println("Total cost: " + totalCost());
+        System.out.println("***************************************************");
     }
 
-    //sắp xếp các phần tử trong giỏ hàng theo tiêu đề
-    public void sortByTitle() {
-        Collections.sort(itemsOrdered, Comparator.comparing(Media::getTitle));
-        System.out.println("Items sorted by title:");
-        for (int i = 0; i < itemsOrdered.size(); i++) {
-            itemsOrdered.get(i).toStringItem(i + 1);
-        }
-    }
-
-    //sắp xếp các phần tử trong giỏ hàng theo giá
-    public void sortByCost() {
-        Collections.sort(itemsOrdered, Comparator.comparing(Media::getCost));
-        System.out.println("Items sorted by cost:");
-        for (int i = 0; i < itemsOrdered.size(); i++) {
-            itemsOrdered.get(i).toStringItem(i + 1);
-        }
-    }
-
-    
-    public void playMedia(Media media) {
-        if (media instanceof DigitalVideoDisc) {
-            DigitalVideoDisc dvd = (DigitalVideoDisc) media;
-            dvd.play();
-        } else {
-            System.out.println("Cannot play this type of media.");
-        }
-    }
-
-    // đặt hàng
-    public void placeOrder() {
-        System.out.println("An order has been created.");
-        itemsOrdered.clear(); 
-    }
-    public Media searchMedia(String title) {
+    public ObservableList<Media> searchByID(Integer id) {
+        ObservableList<Media> result = FXCollections.observableArrayList();
         for (Media media : itemsOrdered) {
-            if (media.getTitle().equalsIgnoreCase(title)) {
-                return media;
+            if (media.getId() == id) {
+//                media.toString();
+                result.add(media);
             }
         }
-        return null; 
+        return result;
+    }
+
+    public ObservableList<Media> searchByTitle(String title) {
+        ObservableList<Media> result = FXCollections.observableArrayList();
+        for (Media media : itemsOrdered) {
+            if (media.getTitle().contains(title)) {
+                result.add(media);
+            }
+        }
+        return result;
+    }
+
+
+    public void sort(Comparator<Media> comparator) {
+        itemsOrdered.sort(comparator);
+    }
+
+    public void clear() {
+        itemsOrdered.clear();
+    }
+
+    public ObservableList<Media> getItemsOrdered() {
+        return itemsOrdered;
     }
 }

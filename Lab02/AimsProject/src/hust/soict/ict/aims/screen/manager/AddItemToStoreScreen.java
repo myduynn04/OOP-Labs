@@ -10,7 +10,7 @@ import javax.swing.JTextField;
 import hust.soict.ict.aims.store.Store;
 
 public abstract class AddItemToStoreScreen extends JFrame {
-	protected Store store;
+    protected Store store;
     protected JFrame frame;
 
     public AddItemToStoreScreen(Store store) {

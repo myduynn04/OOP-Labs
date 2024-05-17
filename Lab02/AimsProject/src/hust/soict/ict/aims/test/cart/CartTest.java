@@ -1,4 +1,4 @@
-package hust.soict.ict.test.cart;
+package hust.soict.ict.aims.test.cart;
 
 import hust.soict.ict.aims.cart.Cart;
 import hust.soict.ict.aims.media.*;
@@ -20,7 +20,7 @@ public class CartTest{
         CompactDisc cd1 = new CompactDisc("Best of 80s", "Music", "Various Artists","Duong", 1223, 153);
         anOrder.addMedia(cd1);
 
-        anOrder.orderedItems();
+
         anOrder.searchByTitle("The Lion King");
     }
 }

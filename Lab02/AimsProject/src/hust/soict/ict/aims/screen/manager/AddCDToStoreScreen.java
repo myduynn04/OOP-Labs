@@ -12,8 +12,8 @@ import javax.swing.JTextField;
 import hust.soict.ict.aims.media.CompactDisc;
 import hust.soict.ict.aims.store.Store;
 
-public class AddCDToScreen extends AddItemToStoreScreen{
-	private JLabel titleLabel;
+public class AddCDToStoreScreen extends AddItemToStoreScreen{
+    private JLabel titleLabel;
     private JLabel categoryLabel;
     private JLabel artistLabel;
     private JLabel directorLabel;
@@ -25,8 +25,8 @@ public class AddCDToScreen extends AddItemToStoreScreen{
     private JTextField directorField;
     private JTextField costField;
     private JTextField lengthField;
-    private JButton addButton; 
-    public AddCDToScreen(Store store) {
+    private JButton addButton;
+    public AddCDToStoreScreen(Store store) {
         super(store);
         addButton = new JButton("Add CD"); // Initialize the addButton
 
@@ -60,7 +60,7 @@ public class AddCDToScreen extends AddItemToStoreScreen{
         panel.add(artistLabel);
         panel.add(artistField);
 
-        panel.add(directorLabel); 
+        panel.add(directorLabel);
         panel.add(directorField);
 
         panel.add(costLabel);
@@ -68,7 +68,7 @@ public class AddCDToScreen extends AddItemToStoreScreen{
 
         panel.add(lengthLabel);
         panel.add(lengthField);
-        
+
         panel.add(addButton);
         frame.add(panel, BorderLayout.CENTER); // Thêm JPanel vào cửa sổ frame
         addButton.addActionListener(e -> addItemToStore()); // Xử lý sự
@@ -80,7 +80,7 @@ public class AddCDToScreen extends AddItemToStoreScreen{
         String category = categoryField.getText();
         String artist = artistField.getText();
         String director = directorField.getText();
-        double cost = Double.parseDouble(costField.getText());
+        float cost = Float.parseFloat(costField.getText());
         int length = Integer.parseInt(lengthField.getText());
 
         CompactDisc cd = new CompactDisc(title, category, director,artist,length, cost);
@@ -88,4 +88,5 @@ public class AddCDToScreen extends AddItemToStoreScreen{
         JOptionPane.showMessageDialog(frame, "CD added successfully."); // Thông báo khi sách được thêm
         StoreManagerScreen mainFrame = new StoreManagerScreen(store);
     }
+
 }

@@ -5,7 +5,7 @@ public class CompactDisc extends Disc implements Playable {
     private String artist;
     private ArrayList <Track> trackList = new ArrayList<>();
     private int numberOfSong = 0;
-    public  CompactDisc(String title, String category, String director,String artist,int length, double cost) {
+    public  CompactDisc(String title, String category, String director,String artist,int length, float cost) {
         super(title,category,director,length,cost);
         this.artist = artist;
     }
@@ -25,7 +25,7 @@ public class CompactDisc extends Disc implements Playable {
                 return;
             }
         }
-        trackList.add(musicSongInput); 
+        trackList.add(musicSongInput);
         numberOfSong++;
 
     }
@@ -38,7 +38,7 @@ public class CompactDisc extends Disc implements Playable {
             }
         }
         System.out.println("Track not found in TrackList");
-           
+
     }
     public int getLength(){
         int totalLength = 0;
@@ -51,18 +51,19 @@ public class CompactDisc extends Disc implements Playable {
         return numberOfSong;
     }
     @Override
-    //String title, String category,String director,int length, double cost
+    //String title, String category,String director,int length, float cost
     public void toStringItem(int order){
         System.out.println(order + ".CompactDisc - " + this.getTitle() + " - " + this.getCategory()+ " - " + this.getDirector() +  " - " + this.getArtist() + " - " + this.getLength()+ " - " + this.getCost() + " $");
     }
     public boolean isMatchItem(CompactDisc item){
         return this.id == item.id &&
-        this.title.equals(item.getTitle())&& 
-        this.category.equals(item.getCategory()) &&
-        this.cost == item.cost && 
-        this.director.equals(item.getDirector()) && 
-        this.length == item.length && 
-        this.artist.equals(item.getArtist());
+                this.title.equals(item.getTitle())&&
+                this.category.equals(item.getCategory()) &&
+                this.cost == item.cost &&
+                this.director.equals(item.getDirector()) &&
+                this.length == item.length &&
+                this.artist.equals(item.getArtist());
     }
-    
+
+
 }

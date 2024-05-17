@@ -7,8 +7,8 @@ import hust.soict.ict.aims.store.Store;
 import java.awt.*;
 
 
-public class AddBookToScreen extends AddItemToStoreScreen {
-	private JLabel titleLabel;
+public class AddBookToStoreScreen extends AddItemToStoreScreen {
+    private JLabel titleLabel;
     private JLabel categoryLabel;
     private JLabel authorLabel;
     private JLabel costLabel;
@@ -20,10 +20,10 @@ public class AddBookToScreen extends AddItemToStoreScreen {
     private JTextField tokenField;
     private JButton addButton;
 
-    public AddBookToScreen(Store store) {
+    public AddBookToStoreScreen(Store store) {
         super(store);
         addButton = new JButton("Add Book");
-        
+
         titleLabel = new JLabel("Title:");
         categoryLabel = new JLabel("Category:");
         authorLabel = new JLabel("Author:");
@@ -63,7 +63,7 @@ public class AddBookToScreen extends AddItemToStoreScreen {
         String title = titleField.getText();
         String category = categoryField.getText();
         String author = authorField.getText();
-        double cost = Double.parseDouble(costField.getText());
+        float cost = Float.parseFloat(costField.getText());
         int token = Integer.parseInt(tokenField.getText());
         Book book = new Book(title, category, author, cost, token);
         store.addMedia(book);

@@ -5,12 +5,12 @@ public class CD {
     private String category;
     private String artist;
     private String director;
-    private double cost;
+    private float cost;
     private int length;
     private ArrayList <Track> trackList = new ArrayList<>();
     private int numberOfSong = 0;
 
-    public CD(String title, String category, String artist, String director, double cost,int length){
+    public CD(String title, String category, String artist, String director, float cost,int length){
         this.title = title;
         this.category = category;
         this.artist = artist;
@@ -18,14 +18,14 @@ public class CD {
         this.cost = cost;
         this.length = length;
     }
-    public CD(String title, String category, String artist, String director, double cost){
+    public CD(String title, String category, String artist, String director, float cost){
         this.title = title;
         this.category = category;
         this.artist = artist;
         this.director = director;
         this.cost = cost;
     }
-    public CD(String title, String category, String artist, double cost){
+    public CD(String title, String category, String artist, float cost){
         this.title = title;
         this.category = category;
         this.artist = artist;
@@ -38,7 +38,7 @@ public class CD {
                 return;
             }
         }
-        trackList.add(musicSongInput); 
+        trackList.add(musicSongInput);
         numberOfSong++;
 
     }
@@ -54,7 +54,7 @@ public class CD {
         }
         if(!found){
             System.out.println("Song not found in TrackList");
-        }      
+        }
     }
 
     public CD(String title){
@@ -73,7 +73,7 @@ public class CD {
     public String getArtist() {
         return artist;
     }
-    public double getCost() {
+    public float getCost() {
         return cost;
     }
     public int getLength() {

@@ -71,7 +71,7 @@ public class DisplayMedia extends JFrame{
 	    public static void main(String[] args) {
 	        
 	    	
-	    	    Disc disc1 = new Disc("Inception", "Science Fiction", "Christopher Nolan", 148, 14.99);
+	    	    Disc disc1 = new Disc("Inception", "Science Fiction", "Christopher Nolan", 148, 14.99f);
 	    	    DisplayMedia displayMedia1 = new DisplayMedia(disc1);
 
 	    	    

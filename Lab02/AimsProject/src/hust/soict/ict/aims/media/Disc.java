@@ -3,7 +3,7 @@ package hust.soict.ict.aims.media;
 public class Disc extends Media{
     protected String director;
     protected int length;
-    public Disc(String title, String category,String director,int length, double cost) {
+    public Disc(String title, String category,String director,int length, float cost) {
         super(title,category,cost);
         this.director = director;
         this.length = length;
@@ -16,10 +16,10 @@ public class Disc extends Media{
     }
     public boolean isMatchItem(Disc item) {
         return this.id == item.id &&
-        this.title.equals(item.getTitle())&& 
-        this.category.equals(item.getCategory()) &&
-        this.cost == item.cost && 
-        this.director.equals(item.getDirector()) && 
-        this.length == item.length;
+                this.title.equals(item.getTitle())&&
+                this.category.equals(item.getCategory()) &&
+                this.cost == item.cost &&
+                this.director.equals(item.getDirector()) &&
+                this.length == item.length;
     }
 }

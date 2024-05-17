@@ -12,7 +12,7 @@ import hust.soict.ict.aims.media.Media;
 import hust.soict.ict.aims.store.Store;
 
 public class StoreManagerScreen extends JFrame {
-	private Store store;
+    private Store store;
 
     public static void main(String[] args) {
         Store store = new Store();
@@ -62,7 +62,7 @@ public class StoreManagerScreen extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 // Switch to Add Book Screen
                 dispose();
-                AddBookToScreen temp = new AddBookToScreen(store);
+                AddBookToStoreScreen temp = new AddBookToStoreScreen(store);
                 temp.display();
 
             }
@@ -75,7 +75,7 @@ public class StoreManagerScreen extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 // Switch to Add CD Screen
                 dispose();
-                AddCDToScreen temp = new AddCDToScreen(store);
+                AddCDToStoreScreen temp = new AddCDToStoreScreen(store);
                 temp.display();
 
 
@@ -89,7 +89,7 @@ public class StoreManagerScreen extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 // Switch to Add DVD Screen
                 dispose();
-                AddDVDToScreen temp = new AddDVDToScreen(store);
+                AddDVDToStoreScreen temp = new AddDVDToStoreScreen(store);
                 temp.display();
 
             }
@@ -132,18 +132,17 @@ public class StoreManagerScreen extends JFrame {
                 gbc.fill = GridBagConstraints.BOTH; // Ô đủ lớn để điền toàn bộ không gian
                 gbc.weightx = 1.0; // Chia đều không gian theo chiều ngang
                 gbc.weighty = 1.0; // Chia đều không gian theo chiều dọc
-    
-                MediaStore cell = new MediaStore(mediaInStore.get(i));
+
+                PlayMedia cell = new PlayMedia(mediaInStore.get(i));
                 cell.setPreferredSize(new Dimension(320, 120)); // Cố định kích thước cell, ví dụ: rộng 200px và cao 100px
                 center.add(cell, gbc);
             }
         }
-    
+
         JScrollPane scrollPane = new JScrollPane(center);
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-    
+
         return scrollPane;
     }
-	
 }

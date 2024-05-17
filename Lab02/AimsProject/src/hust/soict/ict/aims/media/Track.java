@@ -1,9 +1,9 @@
 package hust.soict.ict.aims.media;
 
-public class Track implements Playable {
-	private String title;
+public class Track implements Playable{
+    private String title;
     private int length;
-    
+
     public Track(String title, int length){
         this.title = title;
         this.length = length;
