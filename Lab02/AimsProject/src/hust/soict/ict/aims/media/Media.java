@@ -2,19 +2,19 @@
 package hust.soict.ict.aims.media;
 import java.util.Comparator; 
 import java.util.ArrayList;
-public abstract class Media implements Comparable<Media> {
+public class Media implements Comparable<Media> {
     protected int id;
     protected String title;
     protected String category;
-    protected float cost;
+    protected double cost;
 
-    public Media(int id, String title, String category, float cost){
+    public Media(int id, String title, String category, double cost){
         this.id = id;
         this.title = title;
         this.category = category;
         this.cost = cost; 
     }
-    public Media(String title, String category, float cost){
+    public Media(String title, String category, double cost){
         this.title = title;
         this.category = category;
         this.cost = cost; 
@@ -51,7 +51,7 @@ public abstract class Media implements Comparable<Media> {
     }
     @Override
     public int compareTo(Media other) {
-       
+        // Sắp xếp theo tiêu đề sau đó giá
         int result = this.title.compareTo(other.title);
         if (result == 0) {
             result = Double.compare(other.cost, this.cost);
@@ -59,7 +59,7 @@ public abstract class Media implements Comparable<Media> {
         return result;
     }
 
-    // Cost->title
+    // Comparator để sắp xếp theo giá sau đó tiêu đề
     public static Comparator<Media> COMPARE_BY_COST_TITLE = new Comparator<Media>() {
         @Override
         public int compare(Media media1, Media media2) {
@@ -71,7 +71,7 @@ public abstract class Media implements Comparable<Media> {
         }
     };
 
-    // title->cost
+    // Comparator để sắp xếp theo tiêu đề sau đó giá
     public static Comparator<Media> COMPARE_BY_TITLE_COST = new Comparator<Media>() {
         @Override
         public int compare(Media media1, Media media2) {
@@ -82,4 +82,5 @@ public abstract class Media implements Comparable<Media> {
             return result;
         }
     };
+    
 }

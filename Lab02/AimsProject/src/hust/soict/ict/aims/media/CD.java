@@ -1,7 +1,7 @@
 package hust.soict.ict.aims.media;
 import java.util.ArrayList;
 public class CD {
-	private String title;
+    private String title;
     private String category;
     private String artist;
     private String director;

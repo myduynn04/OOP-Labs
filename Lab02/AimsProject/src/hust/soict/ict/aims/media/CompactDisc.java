@@ -2,11 +2,11 @@ package hust.soict.ict.aims.media;
 import java.util.ArrayList;
 import hust.soict.ict.aims.media.*;
 public class CompactDisc extends Disc implements Playable {
-	private String artist;
+    private String artist;
     private ArrayList <Track> trackList = new ArrayList<>();
     private int numberOfSong = 0;
     public  CompactDisc(String title, String category, String director,String artist,int length, double cost) {
-        super(title,category,director,length,(float) cost);
+        super(title,category,director,length,cost);
         this.artist = artist;
     }
     public String getArtist(){
@@ -51,7 +51,7 @@ public class CompactDisc extends Disc implements Playable {
         return numberOfSong;
     }
     @Override
-   
+    //String title, String category,String director,int length, double cost
     public void toStringItem(int order){
         System.out.println(order + ".CompactDisc - " + this.getTitle() + " - " + this.getCategory()+ " - " + this.getDirector() +  " - " + this.getArtist() + " - " + this.getLength()+ " - " + this.getCost() + " $");
     }
@@ -64,4 +64,5 @@ public class CompactDisc extends Disc implements Playable {
         this.length == item.length && 
         this.artist.equals(item.getArtist());
     }
+    
 }
