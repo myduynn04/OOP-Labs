@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>D:/Hello/Lab02/AimsProject/src</OriginalElement>
+  <nodes>
+    <node x="1500.7087558937983" y="1993.885482796072">Main</node>
+    <node x="899.3213294580272" y="546.1846256326767">hust.soict.ict.aims.media.Media</node>
+    <node x="787.3721352065153" y="1918.3748987386623">hust.soict.ict.aims.test.screen.customer.store.TestViewStoreScreen</node>
+    <node x="677.3562155897908" y="995.0290873218643">hust.soict.ict.aims.screen.manager.DisplayMedia</node>
+    <node x="621.2054584575424" y="450.9442978852061">hust.soict.ict.aims.exception.PlayerException</node>
+    <node x="96.11757042204428" y="1625.8120007012442">hust.soict.ict.aims.screen.manager.AddCDToStoreScreen</node>
+    <node x="261.80536912923685" y="913.020589576615">hust.soict.ict.aims.media.DigitalVideoDisc</node>
+    <node x="1232.234508637544" y="1698.3336475919984">hust.soict.ict.aims.screen.customer.controller.ViewStoreController</node>
+    <node x="533.5458883573926" y="725.6968919739369">hust.soict.ict.aims.media.Disc</node>
+    <node x="1580.455871840739" y="1375.3155587309057">hust.soict.ict.aims.screen.customer.controller.CartController</node>
+    <node x="-11.630764710586021" y="696.3850895096683">hust.soict.ict.aims.media.Track</node>
+    <node x="1226.1260915828373" y="2042.1513803203502">hust.soict.ict.aims.Aims</node>
+    <node x="-401.7335866287616" y="640.4415398902007">hust.soict.ict.aims.media.Playable</node>
+    <node x="1223.0516487834634" y="1051.7024556942965">hust.soict.ict.aims.cart.Cart</node>
+    <node x="-581.382544859382" y="1080.3519691019874">hust.soict.ict.aims.media.Book</node>
+    <node x="451.8158399871325" y="1705.797236734175">hust.soict.ict.aims.screen.manager.AddDVDToStoreScreen</node>
+    <node x="-116.61476956793967" y="1063.3229484561477">hust.soict.ict.aims.media.CD</node>
+    <node x="-470.7433188127807" y="759.9239542702156">hust.soict.ict.aims.media.CompactDisc</node>
+    <node x="-209.1590890591889" y="1773.3229093613197">hust.soict.ict.aims.screen.manager.AddBookToStoreScreen</node>
+    <node x="-148.92593955532664" y="1571.6131419286446">hust.soict.ict.aims.test.cart.CartTest</node>
+    <node x="373.44858762143406" y="1308.374260364176">hust.soict.ict.aims.screen.manager.AddItemToStoreScreen</node>
+    <node x="778.5506790017412" y="1166.732339071369">hust.soict.ict.aims.store.Store</node>
+    <node x="964.5168126826419" y="1728.9172425978195">hust.soict.ict.aims.screen.manager.PlayMedia</node>
+    <node x="498.7878662107465" y="1911.8724537568253">hust.soict.ict.aims.screen.manager.StoreManagerScreen</node>
+    <node x="1129.9941534723944" y="1451.918494829176">hust.soict.ict.aims.screen.customer.controller.ItemController</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="hust.soict.ict.aims.store.Store" target="hust.soict.ict.aims.media.CompactDisc" relationship="CREATE">
+      <point x="3.2099825887144107E-4" y="119.99966092863087" />
+      <point x="915.051" y="1544.0" />
+      <point x="-253.88299999999998" y="1544.0" />
+      <point x="25.86031881278069" y="120.00004572978435" />
+    </edge>
+    <edge source="hust.soict.ict.aims.screen.customer.controller.ItemController" target="hust.soict.ict.aims.media.Media" relationship="TO_ONE">
+      <point x="-149.50015347239435" y="-4.948291762048029E-4" />
+      <point x="1091.0" y="1514.418" />
+      <point x="1091.0" y="1132.0" />
+      <point x="1184.0" y="1132.0" />
+      <point x="1184.0" y="677.685" />
+      <point x="122.49967054197282" y="3.743673232747824E-4" />
+    </edge>
+    <edge source="hust.soict.ict.aims.screen.manager.AddCDToStoreScreen" target="hust.soict.ict.aims.media.CompactDisc" relationship="CREATE">
+      <point x="4.295779557192958E-4" y="-51.00000070124429" />
+      <point x="212.118" y="1544.0" />
+      <point x="-253.88299999999998" y="1544.0" />
+      <point x="25.86031881278069" y="120.00004572978435" />
+    </edge>
+    <edge source="hust.soict.ict.aims.test.screen.customer.store.TestViewStoreScreen" target="hust.soict.ict.aims.screen.customer.controller.ViewStoreController" relationship="CREATE">
+      <point x="-15.000135206515324" y="-50.999898738662296" />
+      <point x="882.872" y="1868.0" />
+      <point x="1378.235" y="1868.0" />
+      <point x="4.913624559321761E-4" y="62.50035240800162" />
+    </edge>
+    <edge source="hust.soict.ict.aims.test.cart.CartTest" target="hust.soict.ict.aims.media.CompactDisc" relationship="CREATE">
+      <point x="-6.0444673351867095E-5" y="-39.50014192864455" />
+      <point x="-64.92599999999999" y="1544.0" />
+      <point x="-253.88299999999998" y="1544.0" />
+      <point x="25.86031881278069" y="120.00004572978435" />
+    </edge>
+    <edge source="hust.soict.ict.aims.screen.manager.AddDVDToStoreScreen" target="hust.soict.ict.aims.media.DigitalVideoDisc" relationship="CREATE">
+      <point x="120.50016001286747" y="-2.367341749049956E-4" />
+      <point x="723.0" y="1756.797" />
+      <point x="723.0" y="1290.874" />
+      <point x="439.305" y="1290.874" />
+      <point x="-3.6912923687282273E-4" y="74.000410423385" />
+    </edge>
+    <edge source="hust.soict.ict.aims.store.Store" target="hust.soict.ict.aims.media.Book" relationship="CREATE">
+      <point x="-17.178679001741216" y="119.99966092863087" />
+      <point x="897.872" y="1478.0" />
+      <point x="-231.0" y="1478.0" />
+      <point x="-231.0" y="1200.352" />
+      <point x="154.99954485938207" y="3.089801271016768E-5" />
+    </edge>
+    <edge source="hust.soict.ict.aims.media.Disc" target="hust.soict.ict.aims.media.Media" relationship="GENERALIZATION">
+      <point x="1.116426074077026E-4" y="-62.49989197393688" />
+      <point x="674.046" y="585.0" />
+      <point x="853.705" y="585.0" />
+      <point x="853.705" y="677.685" />
+      <point x="-122.50032945802718" y="3.743673232747824E-4" />
+    </edge>
+    <edge source="hust.soict.ict.aims.media.DigitalVideoDisc" target="hust.soict.ict.aims.exception.PlayerException" relationship="CREATE">
+      <point x="-177.50036912923687" y="-14.999589576614994" />
+      <point x="-50.0" y="972.021" />
+      <point x="-50.0" y="489.444" />
+      <point x="-100.00045845754238" y="-2.978852060664394E-4" />
+    </edge>
+    <edge source="hust.soict.ict.aims.screen.customer.controller.CartController" target="hust.soict.ict.aims.cart.Cart" relationship="TO_ONE">
+      <point x="-151.99987184073916" y="92.68444126909435" />
+      <point x="1215.0" y="1599.5" />
+      <point x="1215.0" y="1840.834" />
+      <point x="1901.956" y="1840.834" />
+      <point x="1901.956" y="1183.202" />
+      <point x="166.0003512165365" y="-4.55694296533693E-4" />
+    </edge>
+    <edge source="hust.soict.ict.aims.screen.manager.DisplayMedia" target="hust.soict.ict.aims.media.Media" relationship="TO_ONE">
+      <point x="-2.1558979085511965E-4" y="50.99991267813573" />
+      <point x="780.856" y="1132.0" />
+      <point x="1184.0" y="1132.0" />
+      <point x="1184.0" y="677.685" />
+      <point x="122.49967054197282" y="3.743673232747824E-4" />
+    </edge>
+    <edge source="hust.soict.ict.aims.store.Store" target="hust.soict.ict.aims.media.DigitalVideoDisc" relationship="CREATE">
+      <point x="-136.49967900174113" y="-15.000339071369126" />
+      <point x="723.0" y="1271.732" />
+      <point x="723.0" y="1290.874" />
+      <point x="439.305" y="1290.874" />
+      <point x="-3.6912923687282273E-4" y="74.000410423385" />
+    </edge>
+    <edge source="hust.soict.ict.aims.screen.customer.controller.ViewStoreController" target="hust.soict.ict.aims.store.Store" relationship="TO_ONE">
+      <point x="4.913624559321761E-4" y="-62.49964759199838" />
+      <point x="1378.235" y="1669.0" />
+      <point x="752.0" y="1669.0" />
+      <point x="752.0" y="1286.732" />
+      <point x="-136.49967900174113" y="-3.3907136912603164E-4" />
+    </edge>
+    <edge source="hust.soict.ict.aims.media.Book" target="hust.soict.ict.aims.media.Media" relationship="GENERALIZATION">
+      <point x="-76.860455140618" y="-119.9999691019874" />
+      <point x="-503.24300000000005" y="585.0" />
+      <point x="853.705" y="585.0" />
+      <point x="853.705" y="677.685" />
+      <point x="-122.50032945802718" y="3.743673232747824E-4" />
+    </edge>
+    <edge source="hust.soict.ict.aims.cart.Cart" target="hust.soict.ict.aims.media.Media" relationship="TO_MANY">
+      <point x="-165.99964878346339" y="-4.55694296533693E-4" />
+      <point x="1184.0" y="1183.202" />
+      <point x="1184.0" y="677.685" />
+      <point x="122.49967054197282" y="3.743673232747824E-4" />
+    </edge>
+    <edge source="hust.soict.ict.aims.screen.manager.StoreManagerScreen" target="hust.soict.ict.aims.screen.manager.AddBookToStoreScreen" relationship="CREATE">
+      <point x="-112.5" y="14.999546243174791" />
+      <point x="-86.65908905918889" y="2012.372" />
+      <point x="0.0" y="51.0" />
+    </edge>
+    <edge source="hust.soict.ict.aims.screen.manager.AddBookToStoreScreen" target="hust.soict.ict.aims.screen.manager.StoreManagerScreen" relationship="CREATE">
+      <point x="8.905918889468012E-5" y="-50.999909361319624" />
+      <point x="-86.65899999999999" y="1755.823" />
+      <point x="243.5" y="1755.823" />
+      <point x="243.5" y="1791.0" />
+      <point x="366.0" y="1791.0" />
+      <point x="366.0" y="1997.372" />
+      <point x="-112.49986621074646" y="-4.537568252089841E-4" />
+    </edge>
+    <edge source="hust.soict.ict.aims.media.CompactDisc" target="hust.soict.ict.aims.exception.PlayerException" relationship="CREATE">
+      <point x="191.00031881278068" y="4.572978434680408E-5" />
+      <point x="-50.0" y="879.924" />
+      <point x="-50.0" y="489.444" />
+      <point x="-100.00045845754238" y="-2.978852060664394E-4" />
+    </edge>
+    <edge source="hust.soict.ict.aims.media.Track" target="hust.soict.ict.aims.media.Playable" relationship="REALIZATION">
+      <point x="-2.3528941397898961E-4" y="96.99991049033167" />
+      <point x="86.869" y="1032.0" />
+      <point x="-488.24300000000005" y="1032.0" />
+      <point x="-488.24300000000005" y="667.442" />
+      <point x="-58.50041337123844" y="4.6010979929178575E-4" />
+    </edge>
+    <edge source="hust.soict.ict.aims.screen.manager.AddCDToStoreScreen" target="hust.soict.ict.aims.screen.manager.StoreManagerScreen" relationship="CREATE">
+      <point x="46.38242957795572" y="50.99999929875571" />
+      <point x="258.5" y="1791.0" />
+      <point x="366.0" y="1791.0" />
+      <point x="366.0" y="1997.372" />
+      <point x="-112.49986621074646" y="-4.537568252089841E-4" />
+    </edge>
+    <edge source="hust.soict.ict.aims.media.CompactDisc" target="hust.soict.ict.aims.media.Track" relationship="TO_MANY">
+      <point x="191.00031881278068" y="-22.92395427021563" />
+      <point x="-98.50023528941398" y="63.61491049033168" />
+    </edge>
+    <edge source="hust.soict.ict.aims.screen.manager.StoreManagerScreen" target="hust.soict.ict.aims.screen.manager.AddCDToStoreScreen" relationship="CREATE">
+      <point x="-112.5" y="29.99954624317479" />
+      <point x="-278.88254485938205" y="2027.372" />
+      <point x="-278.88254485938205" y="1676.8120007012442" />
+      <point x="-116.0" y="0.0" />
+    </edge>
+    <edge source="hust.soict.ict.aims.Aims" target="hust.soict.ict.aims.screen.customer.controller.ViewStoreController" relationship="CREATE">
+      <point x="29.999908417162715" y="-51.00038032035013" />
+      <point x="1340.126" y="1868.0" />
+      <point x="1378.235" y="1868.0" />
+      <point x="4.913624559321761E-4" y="62.50035240800162" />
+    </edge>
+    <edge source="hust.soict.ict.aims.screen.manager.AddCDToStoreScreen" target="hust.soict.ict.aims.screen.manager.AddItemToStoreScreen" relationship="GENERALIZATION">
+      <point x="116.00042957795571" y="-7.012442893028492E-7" />
+      <point x="351.0" y="1676.812" />
+      <point x="351.0" y="1359.374" />
+      <point x="-119.49958762143405" y="-2.6036417602881556E-4" />
+    </edge>
+    <edge source="hust.soict.ict.aims.screen.customer.controller.CartController" target="hust.soict.ict.aims.store.Store" relationship="TO_ONE">
+      <point x="1.2815926083931117E-4" y="131.50044126909438" />
+      <point x="1732.456" y="1669.0" />
+      <point x="752.0" y="1669.0" />
+      <point x="752.0" y="1286.732" />
+      <point x="-136.49967900174113" y="-3.3907136912603164E-4" />
+    </edge>
+    <edge source="hust.soict.ict.aims.Aims" target="hust.soict.ict.aims.store.Store" relationship="CREATE">
+      <point x="-84.00009158283729" y="14.999619679649868" />
+      <point x="770.0" y="2108.151" />
+      <point x="770.0" y="1569.418" />
+      <point x="930.051" y="1569.418" />
+      <point x="15.000320998258871" y="119.99966092863087" />
+    </edge>
+    <edge source="hust.soict.ict.aims.Aims" target="hust.soict.ict.aims.store.Store" relationship="TO_ONE">
+      <point x="-84.00009158283729" y="-3.8032035013202403E-4" />
+      <point x="752.0" y="2093.151" />
+      <point x="752.0" y="1286.732" />
+      <point x="-136.49967900174113" y="-3.3907136912603164E-4" />
+    </edge>
+    <edge source="hust.soict.ict.aims.media.Track" target="hust.soict.ict.aims.exception.PlayerException" relationship="CREATE">
+      <point x="-98.50023528941398" y="-8.950966832799168E-5" />
+      <point x="-50.0" y="793.385" />
+      <point x="-50.0" y="489.444" />
+      <point x="-100.00045845754238" y="-2.978852060664394E-4" />
+    </edge>
+    <edge source="hust.soict.ict.aims.media.CompactDisc" target="hust.soict.ict.aims.media.Playable" relationship="REALIZATION">
+      <point x="3.188127806765806E-4" y="120.00004572978435" />
+      <point x="-279.743" y="1032.0" />
+      <point x="-488.24300000000005" y="1032.0" />
+      <point x="-488.24300000000005" y="667.442" />
+      <point x="-58.50041337123844" y="4.6010979929178575E-4" />
+    </edge>
+    <edge source="hust.soict.ict.aims.media.CD" target="hust.soict.ict.aims.media.Track" relationship="TO_MANY">
+      <point x="-2.3043206033435126E-4" y="-177.49994845614776" />
+      <point x="42.38499999999999" y="987.021" />
+      <point x="-69.0" y="987.021" />
+      <point x="-69.0" y="857.0" />
+      <point x="-98.50023528941398" y="63.61491049033168" />
+    </edge>
+    <edge source="hust.soict.ict.aims.screen.manager.PlayMedia" target="hust.soict.ict.aims.media.Media" relationship="TO_ONE">
+      <point x="1.0341873173581462" y="-51.00024259781958" />
+      <point x="1069.051" y="1684.0" />
+      <point x="1091.0" y="1684.0" />
+      <point x="1091.0" y="1132.0" />
+      <point x="1184.0" y="1132.0" />
+      <point x="1184.0" y="677.685" />
+      <point x="122.49967054197282" y="3.743673232747824E-4" />
+    </edge>
+    <edge source="hust.soict.ict.aims.screen.customer.controller.ViewStoreController" target="hust.soict.ict.aims.screen.customer.controller.ItemController" relationship="CREATE">
+      <point x="-14.999508637544068" y="-62.5" />
+      <point x="83.74084652760553" y="62.5" />
+    </edge>
+    <edge source="hust.soict.ict.aims.media.DigitalVideoDisc" target="hust.soict.ict.aims.media.Playable" relationship="REALIZATION">
+      <point x="-177.50036912923687" y="4.104233850057426E-4" />
+      <point x="86.869" y="987.021" />
+      <point x="86.869" y="1032.0" />
+      <point x="-488.24300000000005" y="1032.0" />
+      <point x="-488.24300000000005" y="667.442" />
+      <point x="-58.50041337123844" y="4.6010979929178575E-4" />
+    </edge>
+    <edge source="hust.soict.ict.aims.screen.manager.AddBookToStoreScreen" target="hust.soict.ict.aims.media.Book" relationship="CREATE">
+      <point x="-122.4999109408111" y="9.063868037628708E-5" />
+      <point x="-231.0" y="1824.323" />
+      <point x="-231.0" y="1200.352" />
+      <point x="154.99954485938207" y="3.089801271016768E-5" />
+    </edge>
+    <edge source="hust.soict.ict.aims.screen.manager.AddBookToStoreScreen" target="hust.soict.ict.aims.screen.manager.AddItemToStoreScreen" relationship="GENERALIZATION">
+      <point x="122.5000890591889" y="9.063868037628708E-5" />
+      <point x="351.0" y="1824.323" />
+      <point x="351.0" y="1359.374" />
+      <point x="-119.49958762143405" y="-2.6036417602881556E-4" />
+    </edge>
+    <edge source="hust.soict.ict.aims.screen.customer.controller.ViewStoreController" target="hust.soict.ict.aims.screen.customer.controller.CartController" relationship="CREATE">
+      <point x="146.0" y="0.0" />
+      <point x="1717.456" y="1760.8336475919984" />
+      <point x="-14.99987184073916" y="131.5" />
+    </edge>
+    <edge source="hust.soict.ict.aims.screen.customer.controller.CartController" target="hust.soict.ict.aims.screen.customer.controller.ViewStoreController" relationship="CREATE">
+      <point x="15.00012815926084" y="131.50044126909438" />
+      <point x="1747.456" y="1868.0" />
+      <point x="1378.235" y="1868.0" />
+      <point x="4.913624559321761E-4" y="62.50035240800162" />
+    </edge>
+    <edge source="hust.soict.ict.aims.screen.manager.AddDVDToStoreScreen" target="hust.soict.ict.aims.screen.manager.StoreManagerScreen" relationship="CREATE">
+      <point x="1.6001286746814003E-4" y="50.999763265825095" />
+      <point x="572.316" y="1855.834" />
+      <point x="366.0" y="1855.834" />
+      <point x="366.0" y="1997.372" />
+      <point x="-112.49986621074646" y="-4.537568252089841E-4" />
+    </edge>
+    <edge source="hust.soict.ict.aims.screen.manager.StoreManagerScreen" target="hust.soict.ict.aims.screen.manager.AddDVDToStoreScreen" relationship="CREATE">
+      <point x="0.0" y="-85.5" />
+      <point x="38.972026223613966" y="51.0" />
+    </edge>
+    <edge source="hust.soict.ict.aims.screen.manager.StoreManagerScreen" target="hust.soict.ict.aims.screen.manager.PlayMedia" relationship="CREATE">
+      <point x="0.0" y="85.5" />
+      <point x="611.2878662107464" y="2161.65138032035" />
+      <point x="1068.016812682642" y="2161.65138032035" />
+      <point x="0.0" y="51.0" />
+    </edge>
+    <edge source="hust.soict.ict.aims.test.cart.CartTest" target="hust.soict.ict.aims.media.DigitalVideoDisc" relationship="CREATE">
+      <point x="83.99993955532665" y="-2.801141928644711" />
+      <point x="723.0" y="1608.312" />
+      <point x="723.0" y="1290.874" />
+      <point x="439.305" y="1290.874" />
+      <point x="-3.6912923687282273E-4" y="74.000410423385" />
+    </edge>
+    <edge source="hust.soict.ict.aims.store.Store" target="hust.soict.ict.aims.media.Track" relationship="CREATE">
+      <point x="-136.5" y="-30.000339071369126" />
+      <point x="242.118" y="1256.732" />
+      <point x="242.118" y="793.3850895096683" />
+      <point x="98.5" y="0.0" />
+    </edge>
+    <edge source="hust.soict.ict.aims.Aims" target="hust.soict.ict.aims.cart.Cart" relationship="CREATE">
+      <point x="14.999908417162715" y="-51.00038032035013" />
+      <point x="1325.126" y="1894.0" />
+      <point x="1541.735" y="1894.0" />
+      <point x="152.6833512165365" y="131.49954430570347" />
+    </edge>
+    <edge source="hust.soict.ict.aims.test.screen.customer.store.TestViewStoreScreen" target="hust.soict.ict.aims.cart.Cart" relationship="CREATE">
+      <point x="14.999864793484676" y="-50.999898738662296" />
+      <point x="912.872" y="1894.0" />
+      <point x="1541.735" y="1894.0" />
+      <point x="152.6833512165365" y="131.49954430570347" />
+    </edge>
+    <edge source="hust.soict.ict.aims.media.CompactDisc" target="hust.soict.ict.aims.media.Disc" relationship="GENERALIZATION">
+      <point x="12.509318812780691" y="-119.99995427021565" />
+      <point x="-267.234" y="433.444" />
+      <point x="838.705" y="433.444" />
+      <point x="838.705" y="882.0" />
+      <point x="674.046" y="882.0" />
+      <point x="1.116426074077026E-4" y="62.50010802606312" />
+    </edge>
+    <edge source="hust.soict.ict.aims.screen.manager.DisplayMedia" target="hust.soict.ict.aims.media.Disc" relationship="CREATE">
+      <point x="0.0" y="-51.0" />
+      <point x="106.81032723239827" y="62.5" />
+    </edge>
+    <edge source="hust.soict.ict.aims.screen.customer.controller.ItemController" target="hust.soict.ict.aims.cart.Cart" relationship="TO_ONE">
+      <point x="-1.534723944587313E-4" y="62.499505170823795" />
+      <point x="1279.494" y="1599.5" />
+      <point x="1215.0" y="1599.5" />
+      <point x="1215.0" y="1840.834" />
+      <point x="1901.956" y="1840.834" />
+      <point x="1901.956" y="1183.202" />
+      <point x="166.0003512165365" y="-4.55694296533693E-4" />
+    </edge>
+    <edge source="hust.soict.ict.aims.test.cart.CartTest" target="hust.soict.ict.aims.media.Book" relationship="CREATE">
+      <point x="-84.00006044467335" y="-1.4192864455253584E-4" />
+      <point x="-231.0" y="1611.113" />
+      <point x="-231.0" y="1200.352" />
+      <point x="154.99954485938207" y="3.089801271016768E-5" />
+    </edge>
+    <edge source="hust.soict.ict.aims.test.screen.customer.store.TestViewStoreScreen" target="hust.soict.ict.aims.media.DigitalVideoDisc" relationship="CREATE">
+      <point x="-1.3520651532417105E-4" y="-50.999898738662296" />
+      <point x="897.872" y="1736.417" />
+      <point x="723.0" y="1736.417" />
+      <point x="723.0" y="1290.874" />
+      <point x="439.305" y="1290.874" />
+      <point x="-3.6912923687282273E-4" y="74.000410423385" />
+    </edge>
+    <edge source="hust.soict.ict.aims.test.cart.CartTest" target="hust.soict.ict.aims.cart.Cart" relationship="CREATE">
+      <point x="83.99993955532665" y="22.19885807135529" />
+      <point x="78.618" y="1633.312" />
+      <point x="78.618" y="1894.0" />
+      <point x="1541.735" y="1894.0" />
+      <point x="152.6833512165365" y="131.49954430570347" />
+    </edge>
+    <edge source="hust.soict.ict.aims.screen.manager.AddDVDToStoreScreen" target="hust.soict.ict.aims.screen.manager.AddItemToStoreScreen" relationship="GENERALIZATION">
+      <point x="-120.4998399871325" y="-2.367341749049956E-4" />
+      <point x="351.0" y="1756.797" />
+      <point x="351.0" y="1359.374" />
+      <point x="-119.49958762143405" y="-2.6036417602881556E-4" />
+    </edge>
+    <edge source="hust.soict.ict.aims.screen.manager.AddItemToStoreScreen" target="hust.soict.ict.aims.store.Store" relationship="TO_ONE">
+      <point x="119.50041237856595" y="-2.6036417602881556E-4" />
+      <point x="752.0" y="1359.374" />
+      <point x="752.0" y="1286.732" />
+      <point x="-136.49967900174113" y="-3.3907136912603164E-4" />
+    </edge>
+    <edge source="hust.soict.ict.aims.media.DigitalVideoDisc" target="hust.soict.ict.aims.media.Disc" relationship="GENERALIZATION">
+      <point x="-3.6912923687282273E-4" y="-73.999589576615" />
+      <point x="439.305" y="882.0" />
+      <point x="674.046" y="882.0" />
+      <point x="1.116426074077026E-4" y="62.50010802606312" />
+    </edge>
+    <edge source="hust.soict.ict.aims.screen.manager.StoreManagerScreen" target="hust.soict.ict.aims.store.Store" relationship="CREATE">
+      <point x="112.50013378925354" y="14.999546243174791" />
+      <point x="770.0" y="2012.372" />
+      <point x="770.0" y="1569.418" />
+      <point x="930.051" y="1569.418" />
+      <point x="15.000320998258871" y="119.99966092863087" />
+    </edge>
+    <edge source="hust.soict.ict.aims.test.screen.customer.store.TestViewStoreScreen" target="hust.soict.ict.aims.store.Store" relationship="CREATE">
+      <point x="-110.50013520651532" y="-14.999898738662296" />
+      <point x="770.0" y="1954.375" />
+      <point x="770.0" y="1569.418" />
+      <point x="930.051" y="1569.418" />
+      <point x="15.000320998258871" y="119.99966092863087" />
+    </edge>
+    <edge source="hust.soict.ict.aims.test.screen.customer.store.TestViewStoreScreen" target="hust.soict.ict.aims.store.Store" relationship="TO_ONE">
+      <point x="-110.50013520651532" y="1.0126133770427259E-4" />
+      <point x="752.0" y="1969.375" />
+      <point x="752.0" y="1286.732" />
+      <point x="-136.49967900174113" y="-3.3907136912603164E-4" />
+    </edge>
+    <edge source="hust.soict.ict.aims.screen.manager.StoreManagerScreen" target="hust.soict.ict.aims.store.Store" relationship="TO_ONE">
+      <point x="112.50013378925354" y="-4.537568252089841E-4" />
+      <point x="752.0" y="1997.372" />
+      <point x="752.0" y="1286.732" />
+      <point x="-136.49967900174113" y="-3.3907136912603164E-4" />
+    </edge>
+    <edge source="hust.soict.ict.aims.store.Store" target="hust.soict.ict.aims.media.Media" relationship="TO_MANY">
+      <point x="3.2099825887144107E-4" y="-120.00033907136913" />
+      <point x="915.051" y="1132.0" />
+      <point x="1184.0" y="1132.0" />
+      <point x="1184.0" y="677.685" />
+      <point x="122.49967054197282" y="3.743673232747824E-4" />
+    </edge>
+    <edge source="hust.soict.ict.aims.screen.customer.controller.ViewStoreController" target="hust.soict.ict.aims.cart.Cart" relationship="TO_ONE">
+      <point x="-145.99950863754407" y="3.524080016177322E-4" />
+      <point x="1215.0" y="1760.834" />
+      <point x="1215.0" y="1840.834" />
+      <point x="1901.956" y="1840.834" />
+      <point x="1901.956" y="1183.202" />
+      <point x="166.0003512165365" y="-4.55694296533693E-4" />
+    </edge>
+    <edge source="hust.soict.ict.aims.Aims" target="hust.soict.ict.aims.cart.Cart" relationship="TO_ONE">
+      <point x="-9.158283728538663E-5" y="-51.00038032035013" />
+      <point x="1310.126" y="2001.385" />
+      <point x="1215.0" y="2001.385" />
+      <point x="1215.0" y="1840.834" />
+      <point x="1901.956" y="1840.834" />
+      <point x="1901.956" y="1183.202" />
+      <point x="166.0003512165365" y="-4.55694296533693E-4" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.3746006389776358" showDependencies="true" x="670.0000000000001" y="1307.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

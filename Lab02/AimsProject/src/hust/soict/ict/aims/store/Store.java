@@ -7,55 +7,42 @@ public class Store {
     private ArrayList<Media> itemsInStore = new ArrayList<>();
     private int qtyItem = 0;
     public void initData() {
-        // Khởi tạo 10 sách
-        addMedia(new Book(1, "Java Programming", "Education", "John Smith", 25.0f, 123));
-        addMedia(new Book(2, "Python Basics", "Education", "Alice Johnson", 20.0f, 124));
-        addMedia(new Book(3, "Data Structures", "Education", "David Lee", 30.0f, 125));
-        addMedia(new Book(4, "Algorithms", "Education", "Emily Wang", 28.0f, 126));
-        addMedia(new Book(5, "Machine Learning", "Education", "Michael Brown", 35.0f, 127));
-        addMedia(new Book(6, "History of Art", "History", "Sophia Davis", 18.0f, 128));
-        addMedia(new Book(7, "World War II", "History", "William Wilson", 22.0f, 129));
-        addMedia(new Book(8, "Ancient Civilizations", "History", "Olivia Martinez", 26.0f, 130));
-        addMedia(new Book(9, "Literature Classics", "Literature", "Ethan Taylor", 32.0f, 131));
-        addMedia(new Book(10, "Modern Poetry", "Literature", "Ava Anderson", 15.0f, 132));
+        // Book
+        addMedia(new Book(1, "Naruto", "Manga", "Masashi Kishimoto", 25.0f, 123));
+        addMedia(new Book(2, "One Piece", "Manga", "Eiichiro Oda", 20.0f, 124));
+        addMedia(new Book(3, "Attack on Titan", "Manga", "Hajime Isayama", 30.0f, 125));
+        addMedia(new Book(4, "Fullmetal Alchemist", "Manga", "Hiromu Arakawa", 28.0f, 126));
+        addMedia(new Book(5, "Death Note", "Manga", "Tsugumi Ohba", 35.0f, 127));
+        addMedia(new Book(6, "My Hero Academia", "Manga", "Kohei Horikoshi", 18.0f, 128));
+        addMedia(new Book(7, "To Kill a Mockingbird", "Literature", "Harper Lee", 25.0f, 133));
+        addMedia(new Book(8, "1984", "Literature", "George Orwell", 20.0f, 134));
 
-        // Khởi tạo 5 DigitalVideoDisc
-        addMedia(new DigitalVideoDisc("The Matrix", "Action", "Wachowski Brothers", 120, 15.0f));
-        addMedia(new DigitalVideoDisc("Inception", "Science Fiction", "Christopher Nolan", 150, 18.0f));
-        addMedia(new DigitalVideoDisc("The Godfather", "Crime", "Francis Ford Coppola", 180, 20.0f));
-        addMedia(new DigitalVideoDisc("The Shawshank Redemption", "Drama", "Frank Darabont", 140, 16.0f));
-        addMedia(new DigitalVideoDisc("Pulp Fiction", "Crime", "Quentin Tarantino", 160, 17));
-
+        // DigitalVideoDisc
+        addMedia(new DigitalVideoDisc("Spirited Away", "Animation", "Hayao Miyazaki", 125, 15.0f));
+        addMedia(new DigitalVideoDisc("Toy Story", "Animation", "John Lasseter", 81, 18.0f));
+        addMedia(new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 88, 20.0f));
+        addMedia(new DigitalVideoDisc("Finding Nemo", "Animation", "Andrew Stanton", 100, 16.0f));
+        addMedia(new DigitalVideoDisc("Shrek", "Animation", "Andrew Adamson", 90, 17.0f));
         // Khởi tạo 5 CompactDisc
-        CompactDisc cd1 = new CompactDisc("Album A", "Pop", "Singer A", "Band A", 60, 12.0f);
-        cd1.addTrack(new Track("Song 1", 4));
-        cd1.addTrack(new Track("Song 2", 5));
-        cd1.addTrack(new Track("Song 3", 3));
+        CompactDisc cd1 = new CompactDisc("Minisode 3: Tomorrow", "Pop", "tubatu", "hitman bang", 40, 12.0f);
+        cd1.addTrack(new Track("Deja vu", 4));
+        cd1.addTrack(new Track("The Killa", 5));
+        cd1.addTrack(new Track("Miracle", 3));
         addMedia(cd1);
 
-        CompactDisc cd2 = new CompactDisc("Album B", "Rock", "Singer B", "Band B", 65, 14.0f);
-        cd2.addTrack(new Track("Track 1", 4));
-        cd2.addTrack(new Track("Track 2", 5));
-        cd2.addTrack(new Track("Track 3", 3));
+        CompactDisc cd2 = new CompactDisc("The dream chapter: Star", "Rock", "TXT", "rabbit", 65, 14.0f);
+        cd2.addTrack(new Track("Crown", 5));
+        cd2.addTrack(new Track("Cat & Dog", 5));
+        cd2.addTrack(new Track("Our Summer", 3));
         addMedia(cd2);
 
-        CompactDisc cd3 = new CompactDisc("Album C", "Jazz", "Singer C", "Band C", 70, 16.0f);
-        cd3.addTrack(new Track("Jazz 1", 4));
-        cd3.addTrack(new Track("Jazz 2", 5));
-        cd3.addTrack(new Track("Jazz 3", 3));
-        addMedia(cd3);
+        CompactDisc cd3 = new CompactDisc("The dream chapter: Eternity", "Pop", "Tomorrow X Together", "slow", 65, 14.0f);
+        cd2.addTrack(new Track("Can't you see me", 5));
+        cd2.addTrack(new Track("Fairy of Sampoo", 5));
+        cd2.addTrack(new Track("Puma", 3));
+        cd2.addTrack(new Track("Drama", 4));
+        addMedia(cd2);
 
-        CompactDisc cd4 = new CompactDisc("Album D", "Hip-hop", "Singer D", "Band D", 55, 13.0f);
-        cd4.addTrack(new Track("Hip-hop 1", 4));
-        cd4.addTrack(new Track("Hip-hop 2", 5));
-        cd4.addTrack(new Track("Hip-hop 3", 3));
-        addMedia(cd4);
-
-        CompactDisc cd5 = new CompactDisc("Album E", "Classical", "Singer E", "Band E", 75, 18.0f);
-        cd5.addTrack(new Track("Classical 1", 4));
-        cd5.addTrack(new Track("Classical 2", 5));
-        cd5.addTrack(new Track("Classical 3", 3));
-        addMedia(cd5);
     }
     public int getQuantity(){
         return this.qtyItem;
