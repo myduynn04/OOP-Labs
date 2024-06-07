@@ -32,9 +32,9 @@ public class TestViewStoreScreen extends Application {
         store = new Store();
 
         // Add some items to store here
-        store.addMedia(new DigitalVideoDisc("Title 1", "Category 1", "Director 1", 100, 2.5f));
-        store.addMedia(new DigitalVideoDisc("Title 2", "Category 2", "Director 2", 200, 3.5f));
-        store.addMedia(new DigitalVideoDisc("Title 3", "Category 3", "Director 3", 150, 3.0f));
+        store.addMedia(new DigitalVideoDisc(1,"Title 1", "Category 1", "Director 1", 100, 2.5f));
+        store.addMedia(new DigitalVideoDisc(2,"Title 2", "Category 2", "Director 2", 200, 3.5f));
+        store.addMedia(new DigitalVideoDisc(3,"Title 3", "Category 3", "Director 3", 150, 3.0f));
 
         launch(args);
     }

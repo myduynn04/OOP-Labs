@@ -55,22 +55,28 @@ public class AddDVDToStoreScreen extends AddItemToStoreScreen {
 
 		panel.add(addButton);
 
-
 		frame.add(panel, BorderLayout.CENTER); // Thêm JPanel vào cửa sổ frame
 		addButton.addActionListener(e -> addItemToStore()); // Xử lý sự kiện khi nút được nhấn
 	}
 
 	@Override
 	protected void addItemToStore() {
-		String title = titleField.getText();
-		String category = categoryField.getText();
-		String director = directorField.getText();
-		int length = Integer.parseInt(lengthField.getText());
-		float cost = Float.parseFloat(costField.getText());
+		try {
+			String title = titleField.getText();
+			String category = categoryField.getText();
+			String director = directorField.getText();
+			int length = Integer.parseInt(lengthField.getText());
+			float cost = Float.parseFloat(costField.getText());
 
-		DigitalVideoDisc dvd = new DigitalVideoDisc(title, category, director, length, cost);
-		store.addMedia(dvd);
-		JOptionPane.showMessageDialog(frame, "DVD added successfully.");
-		StoreManagerScreen mainFrame = new StoreManagerScreen(store);
+			// Lấy id mới
+			int newId = store.getItemsInStore().size() + 1;
+
+			DigitalVideoDisc dvd = new DigitalVideoDisc(newId, title, category, director, length, cost);
+			store.addMedia(dvd);
+			JOptionPane.showMessageDialog(frame, "DVD added successfully.");
+			StoreManagerScreen mainFrame = new StoreManagerScreen(store);
+		} catch (NumberFormatException e) {
+			JOptionPane.showMessageDialog(frame, "Invalid input. Please enter valid numbers for length and cost.", "Error", JOptionPane.ERROR_MESSAGE);
+		}
 	}
 }

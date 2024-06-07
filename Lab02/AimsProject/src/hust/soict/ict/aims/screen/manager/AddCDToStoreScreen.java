@@ -12,7 +12,7 @@ import javax.swing.JTextField;
 import hust.soict.ict.aims.media.CompactDisc;
 import hust.soict.ict.aims.store.Store;
 
-public class AddCDToStoreScreen extends AddItemToStoreScreen{
+public class AddCDToStoreScreen extends AddItemToStoreScreen {
     private JLabel titleLabel;
     private JLabel categoryLabel;
     private JLabel artistLabel;
@@ -26,10 +26,10 @@ public class AddCDToStoreScreen extends AddItemToStoreScreen{
     private JTextField costField;
     private JTextField lengthField;
     private JButton addButton;
+
     public AddCDToStoreScreen(Store store) {
         super(store);
         addButton = new JButton("Add CD"); // Initialize the addButton
-
 
         titleLabel = new JLabel("Title:");
         categoryLabel = new JLabel("Category:");
@@ -71,22 +71,28 @@ public class AddCDToStoreScreen extends AddItemToStoreScreen{
 
         panel.add(addButton);
         frame.add(panel, BorderLayout.CENTER); // Thêm JPanel vào cửa sổ frame
-        addButton.addActionListener(e -> addItemToStore()); // Xử lý sự
+        addButton.addActionListener(e -> addItemToStore()); // Xử lý sự kiện khi nút được nhấn
     }
 
     @Override
     protected void addItemToStore() {
-        String title = titleField.getText();
-        String category = categoryField.getText();
-        String artist = artistField.getText();
-        String director = directorField.getText();
-        float cost = Float.parseFloat(costField.getText());
-        int length = Integer.parseInt(lengthField.getText());
+        try {
+            String title = titleField.getText();
+            String category = categoryField.getText();
+            String artist = artistField.getText();
+            String director = directorField.getText();
+            float cost = Float.parseFloat(costField.getText());
+            int length = Integer.parseInt(lengthField.getText());
 
-        CompactDisc cd = new CompactDisc(title, category, director,artist,length, cost);
-        store.addMedia(cd);
-        JOptionPane.showMessageDialog(frame, "CD added successfully."); // Thông báo khi sách được thêm
-        StoreManagerScreen mainFrame = new StoreManagerScreen(store);
+            // Lấy id mới
+            int newId = store.getItemsInStore().size() + 1;
+
+            CompactDisc cd = new CompactDisc(newId, title, category, director, artist, length, cost);
+            store.addMedia(cd);
+            JOptionPane.showMessageDialog(frame, "CD added successfully."); // Thông báo khi CD được thêm
+            StoreManagerScreen mainFrame = new StoreManagerScreen(store);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(frame, "Invalid input. Please enter valid numbers for length and cost.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }
-
 }

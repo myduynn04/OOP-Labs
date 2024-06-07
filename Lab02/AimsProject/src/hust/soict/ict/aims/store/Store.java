@@ -1,4 +1,5 @@
 package hust.soict.ict.aims.store;
+
 import java.util.ArrayList;
 
 import hust.soict.ict.aims.media.*;
@@ -6,6 +7,7 @@ import hust.soict.ict.aims.media.*;
 public class Store {
     private ArrayList<Media> itemsInStore = new ArrayList<>();
     private int qtyItem = 0;
+
     public void initData() {
         // Book
         addMedia(new Book(1, "Naruto", "Manga", "Masashi Kishimoto", 25.0f, 123));
@@ -18,35 +20,37 @@ public class Store {
         addMedia(new Book(8, "1984", "Literature", "George Orwell", 20.0f, 134));
 
         // DigitalVideoDisc
-        addMedia(new DigitalVideoDisc("Spirited Away", "Animation", "Hayao Miyazaki", 125, 15.0f));
-        addMedia(new DigitalVideoDisc("Toy Story", "Animation", "John Lasseter", 81, 18.0f));
-        addMedia(new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 88, 20.0f));
-        addMedia(new DigitalVideoDisc("Finding Nemo", "Animation", "Andrew Stanton", 100, 16.0f));
-        addMedia(new DigitalVideoDisc("Shrek", "Animation", "Andrew Adamson", 90, 17.0f));
-        // Khởi tạo 5 CompactDisc
-        CompactDisc cd1 = new CompactDisc("Minisode 3: Tomorrow", "Pop", "tubatu", "hitman bang", 40, 12.0f);
+        addMedia(new DigitalVideoDisc(9, "Spirited Away", "Animation", "Hayao Miyazaki", 125, 15.0f));
+        addMedia(new DigitalVideoDisc(10, "Toy Story", "Animation", "John Lasseter", 81, 18.0f));
+        addMedia(new DigitalVideoDisc(11, "The Lion King", "Animation", "Roger Allers", 88, 20.0f));
+        addMedia(new DigitalVideoDisc(12, "Finding Nemo", "Animation", "Andrew Stanton", 100, 16.0f));
+        addMedia(new DigitalVideoDisc(13, "Shrek", "Animation", "Andrew Adamson", 90, 17.0f));
+
+        // CompactDisc
+        CompactDisc cd1 = new CompactDisc(14, "Minisode 3: Tomorrow", "Pop", "hitman bang", "tubatu", 40, 12.0f);
         cd1.addTrack(new Track("Deja vu", 4));
         cd1.addTrack(new Track("The Killa", 5));
         cd1.addTrack(new Track("Miracle", 3));
         addMedia(cd1);
 
-        CompactDisc cd2 = new CompactDisc("The dream chapter: Star", "Rock", "TXT", "rabbit", 65, 14.0f);
+        CompactDisc cd2 = new CompactDisc(15, "The dream chapter: Star", "Rock", "rabbit", "TXT", 65, 14.0f);
         cd2.addTrack(new Track("Crown", 5));
         cd2.addTrack(new Track("Cat & Dog", 5));
         cd2.addTrack(new Track("Our Summer", 3));
         addMedia(cd2);
 
-        CompactDisc cd3 = new CompactDisc("The dream chapter: Eternity", "Pop", "Tomorrow X Together", "slow", 65, 14.0f);
-        cd2.addTrack(new Track("Can't you see me", 5));
-        cd2.addTrack(new Track("Fairy of Sampoo", 5));
-        cd2.addTrack(new Track("Puma", 3));
-        cd2.addTrack(new Track("Drama", 4));
-        addMedia(cd2);
-
+        CompactDisc cd3 = new CompactDisc(16, "The dream chapter: Eternity", "Pop", "slow", "Tomorrow X Together", 65, 14.0f);
+        cd3.addTrack(new Track("Can't you see me", 5));
+        cd3.addTrack(new Track("Fairy of Shampoo", 5));
+        cd3.addTrack(new Track("Puma", 3));
+        cd3.addTrack(new Track("Drama", 4));
+        addMedia(cd3);
     }
-    public int getQuantity(){
+
+    public int getQuantity() {
         return this.qtyItem;
     }
+
     public void addMedia(Media media) {
         for (Media item : itemsInStore) {
             if (item.isMatchItem(media)) {
@@ -86,6 +90,7 @@ public class Store {
             }
         }
     }
+
     public Media searchMedia(Media item) {
         for (Media media : itemsInStore) {
             if (media.isMatchItem(item)) {
@@ -94,7 +99,8 @@ public class Store {
         }
         return null;
     }
-    public Media searchByTitle(String title){
+
+    public Media searchByTitle(String title) {
         for (Media media : itemsInStore) {
             if (media.getTitle().equalsIgnoreCase(title)) {
                 return media;
@@ -102,7 +108,8 @@ public class Store {
         }
         return null;
     }
-    public ArrayList<Media> getItemsInStore(){
+
+    public ArrayList<Media> getItemsInStore() {
         return this.itemsInStore;
     }
 }
